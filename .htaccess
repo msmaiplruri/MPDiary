@@ -1,0 +1,6 @@
+AddHandler cgi-script .scm
+DirectoryIndex index.scm
+
+<Files ~ "^.htaccess$">
+    deny from all
+</Files>

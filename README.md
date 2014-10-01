@@ -1,0 +1,4 @@
+MPDiary
+=======
+
+Masami Private Diary

@@ -1,7 +1,5 @@
 .DS_Store
 Thumbs.db
 
-.htaccess
-
 data/*.wiki
 !data/.howtouse.wiki

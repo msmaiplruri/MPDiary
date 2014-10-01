@@ -1,0 +1,13 @@
+@howtouse
+
+ !: h3
+ #: comment
+ $: link (blank)
+ $$: link (no blank)
+ %: img
+ -: hr
+ newline: br
+ space: pre
+ @: date
+ \: p
+ other: p

@@ -39,27 +39,27 @@
 (define (parse-node node)
     (let ((key (key-of node)) (value (html-escape-string (value-of node))))
         (tree->string
-            (cond
-                ((eq? key #\!)
+            (case key
+                ('#\!
                     (html:h3 value))
-                ((eq? key #\@)
+                ('#\@
                     (html:p :class "date" value))
-                ((eq? key #\space)
+                ('#\space
                     (html:pre value))
-                ((eq? key #\%)
+                ('#\%
                     (html:img :src value :alt value))
-                ((eq? key #\$)
+                ('#\$
                     (if (string=? "$" (substring value 0 1))
                         (let ((_value (substring value 1 (string-length value))))
                             (html:p (html:a :href _value _value)))
                         (html:p (html:a :href value :target "_blank" value))))
-                ((eq? key #\-)
+                ('#\-
                     (html:hr))
-                ((eq? key #\&)
+                ('#\&
                     (html:br))
-                ((eq? key #\\)
+                ('#\\
                     (html:p value))
-                ((eq? key #\^)
+                ('#\^
                     (html:p value))
                 (else
                     "")))))

@@ -12,12 +12,7 @@
      (parent :init-keyword :parent :accessor parent-of)))
 
 (define (include? xn n)
-    (if (> (length xn) 0)
-        (let ((x (car xn)))
-            (if (eq? x n)
-                #t
-                (include? (cdr xn) n)))
-        #f))
+  (find (lambda (v) (eq? v n)) xn))
 
 (define (set-of node lines)
     (if (> (length lines) 0)

@@ -5,7 +5,7 @@
 (define content-type "Content-type: text/html\n\n")
 
 ; View Setting
-(define home "//sample.com")
+(define home "//localhost")
 (define charset "utf-8")
 (define title "Title")
 (define author "Author")
